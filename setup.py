@@ -12,4 +12,5 @@ setup(
         'tensorflow>=2,<3',
         'requests>=2.21.0,<3',
     ],
+    include_package_data=True
 )

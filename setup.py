@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 setup(
     name='tensorflowchessbot',  # Replace with your project name
     version='0.1',
-    packages=find_packages(),
+    packages=['tensorflow_chessbot'],
     install_requires=[
         'beautifulsoup4>=4.6.3,<5',
         'lxml>=4.2.4,<5',

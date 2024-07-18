@@ -18,7 +18,7 @@ import numpy as np
 import PIL.Image
 import argparse
 from time import time
-from tensorflow_chessbot.helper_image_loading import *
+from .helper_image_loading import *
 
 
 def nonmax_suppress_1d(arr, winsize=5):
@@ -193,7 +193,7 @@ def findChessboardCorners(img_arr_gray, noise_threshold = 8000):
       sub_corners = np.array([
         sub_seqs_y[j][0]-corners[0]-dy, sub_seqs_x[i][0]-corners[1]-dx,
         sub_seqs_y[j][-1]-corners[0]+dy, sub_seqs_x[i][-1]-corners[1]+dx],
-        dtype=np.int)
+        dtype=np.int32)
 
       # Generate crop candidate, nearest pixel is fine for correlation check
       sub_img = gray_img_crop.crop(sub_corners).resize((64,64)) 

@@ -43,9 +43,9 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1' # Ignore Tensorflow INFO debug messages
 import tensorflow as tf
 import numpy as np
 
-from helper_functions import shortenFEN, unflipFEN
-import helper_image_loading
-import chessboard_finder
+from .helper_functions import shortenFEN, unflipFEN
+import tensorflow_chessbot.helper_image_loading
+import tensorflow_chessbot.chessboard_finder
 
 def load_graph(frozen_graph_filepath):
     # Load and parse the protobuf file to retrieve the unserialized graph_def.
@@ -61,7 +61,7 @@ def load_graph(frozen_graph_filepath):
 
 class ChessboardPredictor(object):
   """ChessboardPredictor using saved model"""
-  def __init__(self, frozen_graph_path='saved_models/frozen_graph.pb'):
+  def __init__(self, frozen_graph_path='tensorflow_chessbot/saved_models/frozen_graph.pb'):
     # Restore model using a frozen graph.
     print("\t Loading model '%s'" % frozen_graph_path)
     graph = load_graph(frozen_graph_path)

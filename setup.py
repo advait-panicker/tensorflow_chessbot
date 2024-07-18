@@ -8,7 +8,7 @@ setup(
     install_requires=[
         'beautifulsoup4>=4.6.3,<5',
         'lxml>=4.2.4,<5',
-        'Pillow>=5.2.0,<6',
+        'Pillow>=5.2.0',
         'tensorflow>=2,<3',
         'requests>=2.21.0,<3',
     ],

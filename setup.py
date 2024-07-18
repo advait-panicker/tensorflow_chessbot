@@ -10,6 +10,6 @@ setup(
         'lxml>=4.2.4,<5',
         'Pillow>=5.2.0,<6',
         'tensorflow>=1.5.0,<2',
-        'requests<3,>=2.21.0,'
+        'requests<3,>=2.21.0'
     ],
 )
